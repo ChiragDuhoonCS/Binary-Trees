@@ -1,20 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
-void inorder(node) {
-    if(node == null)
-      return;
-    
-      inorder(node -> left);
-      inorder(node -> data);
-      inorder(node -> right);
-
-}
-int main() {
-    inorder(node);
-    cout << "HERE" << endl << inorder << endl;
-    retrun 0;
-}
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -38,8 +21,16 @@ void inorder(Node* node) {
 
 int main() {
     // Example: Create a root node or tree before calling inorder
-    Node* root = nullptr; 
-    // root = new Node{1, nullptr, nullptr}; // Example initialization
+   // Node* root = nullptr;
+   
+   // Example tree:
+    //      1
+    //     / \
+    //    2   3
+    Node* root = new Node{1, nullptr, nullptr};
+    root->left = new Node{2, nullptr, nullptr};
+    root->right = new Node{3, nullptr, nullptr};
+    
     
     inorder(root);
     return 0;
